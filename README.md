@@ -1,19 +1,16 @@
-# Brooks' Dotfiles
+# Dan's Dotfiles
 
 Dotfiles are the preferences, tricks and hacks that you use to tame your
 terminal. There are many like them, but these are mine.
 
-![dotfiles](https://user-images.githubusercontent.com/934497/27137962-48dfe62e-50ed-11e7-990a-587e9a66851c.png)
-
 
 The structure of these dotfiles are heavily influenced by
-[@holman's](https://github.com/holman/dotfiles), but the contents have been
-created and curated by myself over the years.
+[@bswinnerton's](https://github.com/bswinnerton/dotfiles), but the contents has been customized by myself over the years.
 
 ## Installation
 
 ```
-git clone https://github.com/bswinnerton/dotfiles ~/.dotfiles
+git clone https://github.com/dankeezer/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
@@ -39,5 +36,4 @@ There are a few special files and conventions to point out:
 
 ## Thanks
 
-- [@holman](https://github.com/holman/dotfiles)
-- [@ryanb](https://github.com/ryanb/dotfiles)
+- [@bswinnerton](https://github.com/bswinnerton/dotfiles)

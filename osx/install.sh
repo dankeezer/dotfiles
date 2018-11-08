@@ -25,11 +25,78 @@ then
   defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
   defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
+  # Enable better codecs on older machines
+  defaults write bluetoothaudiod "Enable AptX codec" -bool true
+  defaults write bluetoothaudiod "Enable AAC codec" -bool true
+
+  # Change default screenshot location
+  defaults write com.apple.screencapture location ~/Downloads
+
+  # Expand save panel by default
+  defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+  defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+  # Disable the “Are you sure you want to open this application?” dialog
+  defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+  # Require password immediately after sleep or screen saver begins
+  defaults write com.apple.screensaver askForPassword -int 1
+  defaults write com.apple.screensaver askForPasswordDelay -int 0  
+
+  # Finder: show hidden files by default
+  defaults write com.apple.finder AppleShowAllFiles -bool true
+
+  # Finder: show all filename extensions
+  defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+  # Finder: show status bar
+  defaults write com.apple.finder ShowStatusBar -bool true
+
+  # Finder: show path bar
+  defaults write com.apple.finder ShowPathbar -bool true
+
+  # Display full POSIX path as Finder window title
+  defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+  # Disable the warning when changing a file extension
+  defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+  # Avoid creating .DS_Store files on network or USB volumes
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+  defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+  # Disable disk image verification
+  defaults write com.apple.frameworks.diskimages skip-verify -bool true
+  defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+  defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+  # Automatically open a new Finder window when a volume is mounted
+  defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+  defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+  defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
   # Use list view in all Finder windows by default
   # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
   defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-  # Enable better codecs on older machines
-  defaults write bluetoothaudiod "Enable AptX codec" -bool true
-  defaults write bluetoothaudiod "Enable AAC codec" -bool true
+  # Wipe all (default) app icons from the Dock
+  # This is only really useful when setting up a new Mac, or if you don’t use
+  # the Dock to launch apps.
+  #defaults write com.apple.dock persistent-apps -array
+
+  # Bottom right screen corner → Start screen saver
+  defaults write com.apple.dock wvous-br-corner -int 5
+  defaults write com.apple.dock wvous-br-modifier -int 0
+
+  # Don’t display the annoying prompt when quitting iTerm
+  defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+  # Use plain text mode for new TextEdit documents
+  defaults write com.apple.TextEdit RichText -int 0
+  # Open and save files as UTF-8 in TextEdit
+  defaults write com.apple.TextEdit PlainTextEncoding -int 4
+  defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
+  # Prevent Photos from opening automatically when devices are plugged in
+  defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 fi

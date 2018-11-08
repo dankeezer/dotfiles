@@ -21,3 +21,4 @@ end
 
 # Execute Archey
 ~/.dotfiles/bin/archey
+
