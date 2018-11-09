@@ -1,0 +1,12 @@
+# OSX
+.DS_Store
+
+# CTags
+tags
+tags.*
+
+# Projectionist
+projections.json
+
+# Bundler
+.bundle/config

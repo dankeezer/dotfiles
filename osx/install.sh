@@ -2,6 +2,9 @@
 
 # Inspired by: http://mths.be/osx
 
+echo
+echo "Configuring macOS..."
+
 if [ "$(uname -s)" == "Darwin" ]
 then
   # Set sidebar icon size to small

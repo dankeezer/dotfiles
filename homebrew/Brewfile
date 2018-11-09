@@ -1,0 +1,14 @@
+tap 'universal-ctags/universal-ctags'
+
+brew 'ansible'
+brew 'fish'
+brew 'fzf'
+brew 'gist'
+brew 'git'
+brew 'heroku'
+brew 'jq'
+brew 'rbenv'
+brew 'ripgrep'
+brew 'ruby-build'
+brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'wget'

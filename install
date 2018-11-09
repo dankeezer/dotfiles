@@ -142,8 +142,8 @@ install_dotfiles () {
   done
 }
 
-homebrew/install.sh
-setup_gitconfig
+homebrew/install-homebrew-first.sh
+# setup_gitconfig
 install_dotfiles
 
 # find the installers and run them iteratively
