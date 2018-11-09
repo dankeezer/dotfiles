@@ -4,6 +4,7 @@ brew 'coreutils'
 brew 'gnupg'
 brew 'iproute2mac'
 brew 'pinentry-mac'
+brew 'mas'
 
 cask '1password'
 cask 'docker'
@@ -20,3 +21,5 @@ cask 'virtualbox'
 cask 'viscosity'
 cask 'zoomus'
 cask 'sublime'
+
+mas "MonthlyCal", id: 935250717
