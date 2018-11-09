@@ -21,5 +21,6 @@ cask 'virtualbox'
 cask 'viscosity'
 cask 'zoomus'
 cask 'sublime'
+cask 'sourcetree'
 
 mas "MonthlyCal", id: 935250717
