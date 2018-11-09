@@ -1,5 +1,5 @@
 brew 'pkg-config'
-brew 'openssl'
+brew 'openssl@1.1'
 brew 'curl'
 brew 'python'
 brew 'git', args: ['with-brewed-openssl', 'with-brewed-curl']
