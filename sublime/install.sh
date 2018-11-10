@@ -8,6 +8,7 @@ then
 
 	git clone https://github.com/SideBarEnhancements-org/SideBarEnhancements.git /Users/$(whoami)/Library/Application\ Support/Sublime\ Text\ 3/Packages/SideBarEnhancements
 	git clone https://github.com/p3lim/sublime-highlight-trailing-whitespace /Users/$(whoami)/Library/Application\ Support/Sublime\ Text\ 3/Packages/Highlight\ Trailing\ Whitespace
+	git clone https://github.com/slim-template/ruby-slim.tmbundle.git /Users/$(whoami)/Library/Application\ Support/Sublime\ Text\ 3/Packages/ruby-slim.tmbundle
 
 	rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 	ln -s ~/.dotfiles/sublime/User/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
