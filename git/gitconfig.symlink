@@ -9,7 +9,7 @@
         c = commit -am
         co = checkout
 [core]
-        excludesfile = /Users/keezer/.gitignore_global
+        excludesfile = ~/.gitignore
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
         path =

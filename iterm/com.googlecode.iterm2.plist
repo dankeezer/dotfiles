@@ -911,11 +911,11 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>233 254 918 514 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>197 467 570 352 0 0 1440 877 </string>
+	<string>193 254 1067 470 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>330 220 920 537 0 0 1440 877 </string>
+	<string>97 237 1340 470 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>197 336 920 537 0 0 1440 877 </string>
+	<string>197 420 920 447 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>218 291 920 537 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -2540,6 +2540,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>4F2AE090-1BAB-4923-BCC5-D97AEF4AD507</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -2612,7 +2616,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-10T02:51:02Z</date>
+	<date>2018-11-11T17:13:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -2657,6 +2661,8 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.2.6beta2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
