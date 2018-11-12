@@ -1,11 +1,18 @@
 # Local/private config goes in the include
 [include]
         path = ~/.gitconfig.local
-
 [alias]
-				# View abbreviated SHA, description, and history graph of the latest 20 commits
-				l = log --pretty=oneline -n 20 --graph --abbrev-commit
+        # View abbreviated SHA, description, and history graph of the latest 20 commits
+        l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-		    st = status
-		    c = commit -am
-		    co = checkout
+        st = status
+        c = commit -am
+        co = checkout
+[core]
+        excludesfile = /Users/keezer/.gitignore_global
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[mergetool "sourcetree"]
+        cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true

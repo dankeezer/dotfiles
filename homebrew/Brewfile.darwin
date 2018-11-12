@@ -1,6 +1,7 @@
 tap 'homebrew/cask-versions'
 
 brew 'coreutils'
+brew 'openssl@1.1'
 brew 'gnupg'
 brew 'iproute2mac'
 brew 'pinentry-mac'

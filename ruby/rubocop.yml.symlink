@@ -1,20 +1,84 @@
-Style/FrozenStringLiteralComment:
-  Enabled: false
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - config.ru
+    - config/routes.rb
+    - app/deploy/ibm_cloud_secrets.rb
+    - app/deploy/ibm_cloud_secrets_eu.rb
+  TargetRubyVersion: 2.3
 
-Style/Documentation:
-  Enabled: false
+Rails:
+  Enabled: true
 
 Metrics/LineLength:
   Max: 100
-
-AllCops:
-  Exclude:
-    - 'db/schema.rb'
-    - 'db/migrate/*.rb'
-
+Metrics/MethodLength:
+  Max: 20
+Metrics/ClassLength:
+  Max: 200
+Metrics/AbcSize:
+  Max: 25
 Metrics/BlockLength:
+  Max: 25
   Exclude:
-    - 'config/routes.rb'
+    - 'spec/**/*.rb'
+    - 'lib/tasks/**/*.rake'
+Metrics/ModuleLength:
+  Max: 100
+  Exclude:
+    - 'spec/**/*.rb'
 
-Metrics/BlockLength:
-  Max: 15
+Documentation:
+  Enabled: false
+
+Lint/UselessAccessModifier:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: true
+Style/MultilineTernaryOperator:
+  Enabled: false
+Style/Encoding:
+  Enabled: false
+Layout/AlignParameters:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+# Rails
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Rails/FilePath:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Bundler/DuplicatedGem:
+  Enabled: false
+
+# Allow safe assignment in conditions.
+Style/ParenthesesAroundCondition:
+  AllowSafeAssignment: true
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
