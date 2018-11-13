@@ -13,10 +13,8 @@ alias speedtest 'curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias subl '/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias tmux 'tmux -2'
 alias vi 'vim'
-alias webhook-proxy 'ngrok http 4567 --hostname bswinnerton.ngrok.io'
 
-#  Work Related
-alias local 'env FASTKIT_LOCAL_ENGINES 1'
+alias local 'env FASTKIT_LOCAL_ENGINES=1'
 alias ic 'ibmcloud'
 alias i 'icdctl'
 alias fk 'fastkit'
@@ -24,6 +22,7 @@ alias fki 'fastkit interactive'
 alias fkr 'fastkit restart'
 alias fks 'fastkit status all'
 alias fkt 'fastkit test'
+alias fkp 'fastkit setup proxy & fastkit start proxy'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias .. 'cd ..'
@@ -39,6 +38,3 @@ alias la 'ls -lAF {$colorflag}'
 
 # List only directories
 alias lsd 'la -d */'
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload 'eval $SHELL -l'

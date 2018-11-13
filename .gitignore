@@ -1,5 +1,5 @@
 .DS_Store
-private-env.zsh
+private-env.sh
 private-env.auto.fish
 git/gitconfig.local.symlink
 ruby/bundle.symlink/cache/
