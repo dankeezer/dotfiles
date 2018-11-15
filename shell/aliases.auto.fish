@@ -13,6 +13,7 @@ alias speedtest 'curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias subl '/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias tmux 'tmux -2'
 alias vi 'vim'
+alias cat 'bat'
 
 alias local 'env FASTKIT_LOCAL_ENGINES=1'
 alias ic 'ibmcloud'
