@@ -7,6 +7,17 @@ echo "Configuring macOS..."
 
 if [ "$(uname -s)" == "Darwin" ]
 then
+  # Show these menu items in macos menu
+  defaults write com.apple.systemuiserver menuExtras -array \
+    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+    "/System/Library/CoreServices/Menu Extras/Clock.menu"
+
+  # Show battery percentage in macos menu
+  defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
   # Set sidebar icon size to small
   defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
@@ -22,6 +33,10 @@ then
   defaults write NSGlobalDomain InitialKeyRepeat -int 12
   defaults write NSGlobalDomain KeyRepeat -int 1
 
+  # Use scroll gesture with the Command (⌘) modifier key to zoom
+  defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+  defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 1048576
+
   # Show icons for hard drives, servers, and removable media on the desktop
   defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
   defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
@@ -35,6 +50,9 @@ then
   # Change default screenshot location
   defaults write com.apple.screencapture location ~/Downloads
 
+  # Shut off screenshot preview thumbnails
+  defaults write com.apple.screencapture show-thumbnail -bool false
+
   # Expand save panel by default
   defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
   defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -44,7 +62,13 @@ then
 
   # Require password immediately after sleep or screen saver begins
   defaults write com.apple.screensaver askForPassword -int 1
-  defaults write com.apple.screensaver askForPasswordDelay -int 0  
+  defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+  # Start screen saver after 5 minutes
+  defaults -currentHost write com.apple.screensaver idleTime -int 300
+
+  # Screen Saver: Flurry
+  defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0  
 
   # Finder: show hidden files by default
   defaults write com.apple.finder AppleShowAllFiles -bool true
