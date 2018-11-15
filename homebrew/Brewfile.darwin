@@ -25,5 +25,6 @@ cask 'zoomus'
 cask 'sublime'
 cask 'sourcetree'
 cask 'typora'
+cask 'postman'
 
 mas "MonthlyCal", id: 935250717

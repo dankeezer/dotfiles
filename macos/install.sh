@@ -68,7 +68,7 @@ then
   defaults -currentHost write com.apple.screensaver idleTime -int 300
 
   # Screen Saver: Flurry
-  defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0  
+  defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
 
   # Finder: show hidden files by default
   defaults write com.apple.finder AppleShowAllFiles -bool true
