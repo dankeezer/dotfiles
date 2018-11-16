@@ -110,6 +110,13 @@ then
   # This is only really useful when setting up a new Mac, or if you don’t use
   # the Dock to launch apps.
   #defaults write com.apple.dock persistent-apps -array
+  
+  # Automatically hide and show the Dock
+  defaults write com.apple.dock autohide -bool true
+  # Remove the auto-hiding Dock delay
+  defaults write com.apple.dock autohide-delay -float 0
+  # Shorten the animation when hiding/showing the Dock
+  defaults write com.apple.dock autohide-time-modifier -float 0.15
 
   # Bottom right screen corner → Start screen saver
   defaults write com.apple.dock wvous-br-corner -int 5
