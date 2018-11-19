@@ -8,9 +8,3 @@ vim/vim.symlink/spell
 tags*
 
 fish/fishd.*
-
-sublime-text/User/Package Control.cache/
-sublime-text/User/Package Control.last-run
-sublime-text/User/oscrypto-ca-bundle.crt
-sublime-text/User/Package Control.user-ca-bundle
-sublime-text/User/Package Control.merged-ca-bundle
