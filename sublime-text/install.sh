@@ -52,7 +52,6 @@ then
 
     ln -s ~/.dotfiles/sublime-text/Preferences.sublime-settings \
       "$SUBLIME_BASE_PATH/Packages/User/Preferences.sublime-settings"
-    fi
   }
 
   make_directories
