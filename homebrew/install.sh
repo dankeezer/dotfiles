@@ -5,7 +5,7 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
-echo "Installing Homebrew for you..."
+echo "Installing Homebrew..."
 
 sudo mkdir -p /usr/local/sbin/
 sudo chown -R $(whoami) /usr/local/sbin

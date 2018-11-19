@@ -2,10 +2,9 @@
 
 # Inspired by: http://mths.be/osx
 
-echo
-echo "Configuring macOS..."
-
 if [ "$(uname -s)" == "Darwin" ]
+  echo
+  echo "Configuring macOS..."
 then
   # Show these menu items in macos menu
   defaults write com.apple.systemuiserver menuExtras -array \
@@ -110,7 +109,7 @@ then
   # This is only really useful when setting up a new Mac, or if you don’t use
   # the Dock to launch apps.
   #defaults write com.apple.dock persistent-apps -array
-  
+
   # Automatically hide and show the Dock
   defaults write com.apple.dock autohide -bool true
   # Remove the auto-hiding Dock delay
@@ -133,4 +132,7 @@ then
 
   # Prevent Photos from opening automatically when devices are plugged in
   defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+else
+  echo
+  echo "Not macOS, Skipping macOS configuration..."
 fi
