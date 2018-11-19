@@ -8,6 +8,18 @@ The structure of these dotfiles are heavily influenced by
 [@bswinnerton's](https://github.com/bswinnerton/dotfiles), but the contents has been customized by myself over the years.
 
 ## Installation
+### `curl` method (easiest)
+
+```
+curl -L dots.dankeezer.com | sh
+cd ~/.dotfiles
+./install
+```
+Source code for the script is [here](https://github.com/dankeezer/dots.dankeezer.com). Checksums can be found in the [tag notes](https://github.com/dankeezer/dots.dankeezer.com/tags).
+
+The curl method will install everything automatically. This is really useful for quickly setting up a new machine.
+
+### Manual method
 
 ```
 git clone https://github.com/dankeezer/dotfiles ~/.dotfiles
