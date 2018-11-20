@@ -136,6 +136,11 @@ install_dotfiles () {
   done
 }
 
+install_homebrew_first () {
+  sh -c 'homebrew/homebrew.sh'
+}
+
+install_homebrew_first
 setup_gitconfig
 install_dotfiles
 
