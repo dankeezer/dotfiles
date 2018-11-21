@@ -152,7 +152,10 @@ check_macos_prereqs () {
     echo
     if ! [[ $REPLY =~ ^[Yy]$ ]]
     then
-      echo "Bye!"
+      echo
+      echo "Bye! I'll open the App Store..."
+      sleep 1
+      open -a App\ Store
       exit 0
     fi
   fi
@@ -167,7 +170,10 @@ check_macos_prereqs () {
     echo
     if ! [[ $REPLY =~ ^[Yy]$ ]]
     then
-      echo "Bye!"
+      echo
+      echo "Bye! I'll open the App Store..."
+      sleep 1
+      open -a App\ Store
       exit 0
     fi
   fi
@@ -189,22 +195,22 @@ check_macos_prereqs () {
 }
 
 check_macos_prereqs
-# install_homebrew_first
-# setup_gitconfig
-# install_dotfiles
+install_homebrew_first
+setup_gitconfig
+install_dotfiles
 
-# # find the installers and run them iteratively
-# for installer in $(find . -name '*install.sh'); do
-#   sh -c "${installer}"
-#   success "${installer}"
-# done
+# find the installers and run them iteratively
+for installer in $(find . -name '*install.sh'); do
+  sh -c "${installer}"
+  success "${installer}"
+done
 
-# # run private-env.sh last
-# if [ -f ./private-env.sh ]
-# then
-#   ./private-env.sh
-#   success "./private-env.sh"
-# fi
+# run private-env.sh last
+if [ -f ./private-env.sh ]
+then
+  ./private-env.sh
+  success "./private-env.sh"
+fi
 
 echo ''
 echo '  All installed!'
