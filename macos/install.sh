@@ -125,6 +125,10 @@ then
   # Don’t display the annoying prompt when quitting iTerm
   defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+  # Set custom preferences folder to ~/.dotfiles/iterm
+  defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles/iterm"
+  defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+
   # Use plain text mode for new TextEdit documents
   defaults write com.apple.TextEdit RichText -int 0
   # Open and save files as UTF-8 in TextEdit

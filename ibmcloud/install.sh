@@ -10,7 +10,6 @@ then
   echo "Installing IBM Cloud CLI Tools..."
   curl -sL https://ibm.biz/idt-installer | bash
   ibmcloud api https://api.ng.bluemix.net
-  ibmcloud plugin install container-service -r 'IBM Cloud'
   ibmcloud plugin install cloud-databases
 else
   echo
