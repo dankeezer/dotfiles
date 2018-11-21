@@ -192,6 +192,8 @@ check_macos_prereqs () {
       exit 0
     fi
   fi
+  echo
+  echo "Continuing with installation..."
 }
 
 check_macos_prereqs
