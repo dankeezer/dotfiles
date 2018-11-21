@@ -3,9 +3,10 @@
 # Inspired by: http://mths.be/osx
 
 if [ "$(uname -s)" == "Darwin" ]
+then
   echo
   echo "Configuring macOS..."
-then
+
   # Show these menu items in macos menu
   defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \

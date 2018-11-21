@@ -140,22 +140,71 @@ install_homebrew_first () {
   sh -c 'homebrew/homebrew.sh'
 }
 
-install_homebrew_first
-setup_gitconfig
-install_dotfiles
+check_macos_prereqs () {
+  echo "Before we get started..."
+  read -p "Are you running the most recent macOS version? [y/N]" -n 1 -r
+  echo
+  if ! [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    echo
+    echo "It's recommended you update macOS before running this."
+    read -p "Do you want to continue installing using your old macOS version? [y/N]" -n 1 -r
+    echo
+    if ! [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      echo "Bye!"
+      exit 0
+    fi
+  fi
 
-# find the installers and run them iteratively
-for installer in $(find . -name '*install.sh'); do
-  sh -c "${installer}"
-  success "${installer}"
-done
+  read -p "Are you logged into the App Store? [y/N]" -n 1 -r
+  echo
+  if ! [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    echo
+    echo "It's recommended you log into the App Store before running this."
+    read -p "Do you want to continue installing without logging into the App Store? [y/N]" -n 1 -r
+    echo
+    if ! [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      echo "Bye!"
+      exit 0
+    fi
+  fi
 
-# run private-env.sh last
-if [ -f ./private-env.sh ]
-then
-  ./private-env.sh
-  success "./private-env.sh"
-fi
+  read -p "Have you added private-env.sh into ~/.dotfiles? [y/N]" -n 1 -r
+  echo
+  if ! [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    echo
+    echo "If you have a private-env.sh it's recommended you add it now."
+    read -p "Do you want to continue installing without private-env.sh? [y/N]" -n 1 -r
+    echo
+    if ! [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      echo "Bye!"
+      exit 0
+    fi
+  fi
+}
+
+check_macos_prereqs
+# install_homebrew_first
+# setup_gitconfig
+# install_dotfiles
+
+# # find the installers and run them iteratively
+# for installer in $(find . -name '*install.sh'); do
+#   sh -c "${installer}"
+#   success "${installer}"
+# done
+
+# # run private-env.sh last
+# if [ -f ./private-env.sh ]
+# then
+#   ./private-env.sh
+#   success "./private-env.sh"
+# fi
 
 echo ''
 echo '  All installed!'
