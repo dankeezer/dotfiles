@@ -33,6 +33,9 @@ then
   defaults write NSGlobalDomain InitialKeyRepeat -int 12
   defaults write NSGlobalDomain KeyRepeat -int 1
 
+  # Play feedback when volume is changed
+  defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 1
+
   # Use scroll gesture with the Command (⌘) modifier key to zoom
   defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
   defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 1048576
