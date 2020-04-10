@@ -61,6 +61,9 @@ then
   clone_repo 'SideBarEnhancements-org/SideBarEnhancements.git' 'SideBarEnhancements'
   clone_repo 'p3lim/sublime-highlight-trailing-whitespace' 'Highlight Trailing Whitespace'
   clone_repo 'slim-template/ruby-slim.tmbundle.git' 'ruby-slim.tmbundle'
+  clone_repo 'glaucocustodio/rspec-buddy-for-sublime-text.git' 'RSpec Buddy'
+  clone_repo "/Phidica/sublime-fish.git" 'fish'
+  clone_repo "mattbanks/dotfiles-syntax-highlighting-st2.git" 'dotfiles-syntax-highlighting-st2'
 else
   echo
   echo "Not macOS, skipping Sublime Text 3 Custom Packages and Settings..."
