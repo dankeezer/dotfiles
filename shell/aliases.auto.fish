@@ -5,6 +5,7 @@ alias git '/usr/local/bin/git'
 alias gti 'git'
 alias history 'less ~/.local/share/fish/fish_history'
 # alias irssi 'env TERM screen-256color irssi'
+alias r 'ruby'
 
 alias mux 'tmuxinator'
 alias redraw 'stty sane; clear'
