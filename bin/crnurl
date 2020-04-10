@@ -1,0 +1,34 @@
+#!/bin/bash
+
+ENV=$1
+CRN=$2
+
+parsed_crn () {
+  echo $1 | awk '{ gsub("/", "%2F") ; print }'
+}
+
+service_name () {
+  FIELDS=(${1//:/ })
+  echo ${FIELDS[4]}
+}
+
+url () {
+  if [[ $ENV == "fk" ]]
+  then
+    echo https://ibm-cloud.compose.fastkit/instances/$(parsed_crn $CRN)/ibm/deployments/$(parsed_crn $CRN)
+  fi
+
+  if [[ $ENV == "ys1" ]]
+  then
+    echo https://test.cloud.ibm.com/services/$(service_name $CRN)/$(parsed_crn $CRN)
+  fi
+
+  if [[ $ENV == "yp" ]]
+  then
+    echo https://cloud.ibm.com/services/$(service_name $CRN)/$(parsed_crn $CRN)
+  fi
+}
+
+echo ''
+url
+echo ''
