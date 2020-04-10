@@ -21,3 +21,6 @@ end
 
 # Execute Archey
 ~/.dotfiles/bin/archey
+
+# icdctl
+source (icdctl setup fish)
