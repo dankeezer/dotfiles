@@ -23,6 +23,15 @@ set -g __fish_git_prompt_char_upstream_ahead '⬆ '
 set -g __fish_git_prompt_char_stateseparator ' '
 
 function fish_prompt
+  if test -z "$CLUSTER_NAME"
+  else
+    set_color brmagenta
+    printf '%s' (echo $CLUSTER_NAME)
+
+    set_color normal
+    printf '|'
+  end
+
   set_color green
   printf '%s' (whoami)@(hostname)
 
