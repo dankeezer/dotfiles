@@ -1,0 +1,7 @@
+#write {
+  max-width: 1800px; /*adjust writing area position*/
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: auto; /*or 1000px*/
+}
