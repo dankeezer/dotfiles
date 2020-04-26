@@ -148,7 +148,7 @@ check_macos_prereqs () {
   then
     echo
     echo "It's recommended you update macOS before running this."
-    read -p "Do you want to continue installing using your old macOS version? [y/N]" -n 1 -r
+    read -p "Do you want to continue this installation using your current macOS version? [y/N]" -n 1 -r
     echo
     if ! [[ $REPLY =~ ^[Yy]$ ]]
     then
@@ -166,7 +166,7 @@ check_macos_prereqs () {
   then
     echo
     echo "It's recommended you log into the App Store before running this."
-    read -p "Do you want to continue installing without logging into the App Store? [y/N]" -n 1 -r
+    read -p "Do you want to continue this installation without logging into the App Store? [y/N]" -n 1 -r
     echo
     if ! [[ $REPLY =~ ^[Yy]$ ]]
     then
@@ -184,7 +184,7 @@ check_macos_prereqs () {
   then
     echo
     echo "If you have a private-env.sh it's recommended you add it now."
-    read -p "Do you want to continue installing without private-env.sh? [y/N]" -n 1 -r
+    read -p "Do you want to continue this installation without private-env.sh? [y/N]" -n 1 -r
     echo
     if ! [[ $REPLY =~ ^[Yy]$ ]]
     then
@@ -193,7 +193,7 @@ check_macos_prereqs () {
     fi
   fi
   echo
-  echo "Continuing with installation..."
+  echo "Continuing installation..."
 }
 
 check_macos_prereqs
