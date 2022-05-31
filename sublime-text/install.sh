@@ -2,7 +2,7 @@
 
 if [[ "$(uname -s)" = "Darwin" ]]
 then
-  SUBLIME_BASE_PATH="$HOME/Library/Application Support/Sublime Text 3"
+  SUBLIME_BASE_PATH="$HOME/Library/Application*Support/Sublime*Text*3"
   echo
   echo "Installing Sublime Text 3 Custom Packages and Settings..."
 
@@ -62,7 +62,6 @@ then
   clone_repo 'p3lim/sublime-highlight-trailing-whitespace' 'Highlight Trailing Whitespace'
   clone_repo 'slim-template/ruby-slim.tmbundle.git' 'ruby-slim.tmbundle'
   clone_repo 'glaucocustodio/rspec-buddy-for-sublime-text.git' 'RSpec Buddy'
-  clone_repo "/Phidica/sublime-fish.git" 'fish'
   clone_repo "mattbanks/dotfiles-syntax-highlighting-st2.git" 'dotfiles-syntax-highlighting-st2'
 else
   echo

@@ -1,1 +1,0 @@
-source (icdctl setup fish)

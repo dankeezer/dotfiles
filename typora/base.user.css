@@ -3,5 +3,5 @@
 }
 
 #typora-source .CodeMirror-lines {
-  max-width: auto; /*or 1000px*/
+  max-width: 1800px; /*adjust markdown area position*/
 }
