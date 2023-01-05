@@ -17,6 +17,9 @@ versionMinor=`echo $versionNumber | cut -d'.' -f2`
 versionShort="${versionMajor}.${versionMinor}"
 
 case $versionShort in
+    12.3)
+        versionString="Monterey"
+        ;;
     10.13)
         versionString="High Sierra"
         ;;

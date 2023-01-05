@@ -1,0 +1,13 @@
+{
+  "segments": [
+    "virtual_env",
+    "hostname",
+    "username",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "jobs",
+    "~/.config/powerline-shell/newline_with_dollar_sign.py"
+  ]
+}

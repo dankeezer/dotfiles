@@ -15,7 +15,7 @@ if [[ "$(uname -s)" = "Darwin" ]]
 then
   # Install Brew if it's not already installed
   if ! [ -x "$(command -v brew)" ]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
   # Install dependencies defined in Brewfile

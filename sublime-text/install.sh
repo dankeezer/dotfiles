@@ -2,7 +2,7 @@
 
 if [[ "$(uname -s)" = "Darwin" ]]
 then
-  SUBLIME_BASE_PATH="$HOME/Library/Application*Support/Sublime*Text*3"
+  SUBLIME_BASE_PATH="$HOME/Library/Application Support/Sublime Text"
   echo
   echo "Installing Sublime Text 3 Custom Packages and Settings..."
 
@@ -65,7 +65,7 @@ then
   clone_repo "mattbanks/dotfiles-syntax-highlighting-st2.git" 'dotfiles-syntax-highlighting-st2'
 else
   echo
-  echo "Not macOS, skipping Sublime Text 3 Custom Packages and Settings..."
+  echo "Not macOS, skipping Sublime Text Custom Packages and Settings..."
 fi
 
 exit 0

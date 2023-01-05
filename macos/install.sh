@@ -37,8 +37,7 @@ then
   defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 1
 
   # Use scroll gesture with the Command (⌘) modifier key to zoom
-  defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-  defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 1048576
+
 
   # Show icons for hard drives, servers, and removable media on the desktop
   defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
