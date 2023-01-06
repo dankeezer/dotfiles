@@ -121,7 +121,7 @@ alias reload!='source ~/.zshrc'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vi='vim'
-alias cat='bat'
+# alias cat='bat'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..='cd ..'
@@ -159,7 +159,14 @@ if [ "$TERM" != "linux" ]; then
 fi
 
 # Archey ASCII splash
-~/.dotfiles/bin/archey
+if [[ "$(uname -s)" = "Darwin" ]]
+then
+  ~/.dotfiles/bin/archey
+elif [[ "$(uname -s)" = "Linux" ]]
+then
+  ~/.dotfiles/bin/linux
+fi
+
 
 # asdf
 # . /opt/homebrew/bin/asdf
