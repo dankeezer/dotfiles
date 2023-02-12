@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Variables
+
+## Names
+user=$(whoami)
+hostname=$(hostname | sed 's/.local//g')
+
+## Version of OS X
+version="$(uname -r)"
+
+## Kernal
+kernel=$(uname)
+
+## Uptime
+uptime=$(uptime | sed 's/.*up \([^,]*\), .*/\1/')
+
+## Shell
+shell="$SHELL"
+
+## Terminal
+terminal="$TERM"
+
+## Number of packages installed via Homebrew
+packages=$(dpkg --list | wc --lines)
+
+## CPU Type
+cpu=$(lscpu | grep Vendor | sed 's/^.*://' | grep -Eo '\S{1,20}')
+
+## Memory Amount
+mem=$(grep 'MemTotal' /proc/meminfo | grep -Eo '[0-9]{1,10}')
+ram="$((mem/1048576)) GB"
+
+## Disk usage
+disk=`df | head -2 | tail -1 | awk '{print $5}'`
+
+GREEN='\033[00;32m'
+YELLOW='\033[00;33m'
+LRED='\033[01;31m'
+RED='\033[00;31m'
+PURPLE='\033[00;35m'
+CYAN='\033[00;36m'
+BLUE='\033[38;5;024m'
+WHITE='\033[00;38m'
+
+# Output
+
+echo -e "
+
+${BLUE}                  .******.
+${BLUE}              .*************.                ${WHITE}User: $user
+${BLUE}           .*******************.             ${WHITE}Hostname: $hostname
+${BLUE}          ********${WHITE}@@@${BLUE}**${WHITE}@@@${BLUE}*******            ${WHITE}Version: $version $versionString
+${BLUE}          ***********************            ${WHITE}Kernel: $kernel
+${BLUE}          ******${WHITE}@@@${YELLOW}######${WHITE}@@@${BLUE}*****            ${WHITE}Uptime: $uptime
+${BLUE}          ***${WHITE}@@@@@@@@${YELLOW}##${WHITE}@@@@@@@${BLUE}***            ${WHITE}Shell: $shell
+${BLUE}          *${WHITE}@@@@@@@@@@@@@@@@@@@@@${BLUE}*            ${WHITE}Terminal $terminal
+${BLUE}        .*${WHITE}#@@@@@@@@@@@@@@@@@@@@@#${BLUE}*.          ${WHITE}Packages $packages
+${BLUE}      .***${WHITE}#@@@@@@@@@@@@@@@@@@@@@#${BLUE}***.        ${WHITE}CPU: $cpu
+${BLUE}     *****${WHITE}#@@@@@@@@@@@@@@@@@@@@@#${BLUE}*****       ${WHITE}Memory: $ram
+${BLUE}      '***${WHITE}#@@@@@@@@@@@@@@@@@@@@@#${BLUE}***'        ${WHITE}Disk Used: $disk
+${BLUE}        '*${WHITE}#@@@@@${YELLOW}##${WHITE}@@@@@@@@${YELLOW}##${WHITE}@@@@#${BLUE}*' ${normal}
+
+"
