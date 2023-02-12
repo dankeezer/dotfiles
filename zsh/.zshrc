@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/bin/asdf:/Users/oak/Library/Python/3.9/bin:$PATH
+export PATH=$HOME/.asdf/:$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$HOME/Library/Python/3.9/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -162,7 +162,7 @@ fi
 ~/.dotfiles/bin/archey
 
 # asdf
-# . /opt/homebrew/bin/asdf
+. "$HOME/.asdf/asdf.sh"
 
 # zsh autosuggest
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
